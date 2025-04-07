@@ -6,7 +6,7 @@ def main():
     parser = argparse.ArgumentParser(description='BigQuery MCP Server')
     parser.add_argument('--project', help='BigQuery project', required=False)
     parser.add_argument('--location', help='BigQuery location', required=False)
-    parser.add_argument('--dataset', help='BigQuery dataset', required=False, action='append')
+    parser.add_argument('--dataset', help='BigQuery dataset(s)', required=False, nargs="+")
     
     args = parser.parse_args()
 
